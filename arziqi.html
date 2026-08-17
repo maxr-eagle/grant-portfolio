@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Arzìqi — Case Study · Grant Maxwell</title>
+  <meta name="description" content="Arzìqi: a wealth command center for African owner-operators. How I owned it 0→1 and made trust a first-class product concept." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,560&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/styles/main.css" />
+</head>
+<body>
+  <nav class="nav" id="nav">
+    <div class="wrap nav-inner">
+      <a class="brand" href="/">Grant Maxwell</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Menu">☰</button>
+      <div class="nav-links" id="navLinks">
+        <a href="/#work">Work</a>
+        <a href="/#about">About</a>
+        <a href="/#skills">Skills</a>
+        <a class="nav-cta" href="/#contact">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <header class="cs-hero">
+    <div class="wrap">
+      <a class="back" href="/">← Back to home</a>
+      <p class="eyebrow" style="margin-top:22px;">Case study · Fintech 0→1</p>
+      <h1>Arzìqi — one trusted view of an owner-operator's wealth.</h1>
+      <p class="lead" style="max-width:52ch;margin-top:20px;">A wealth command center for Nigerian &amp; African
+        owner-operators. Founded by Mensaah; I was brought in at concept to own the product 0→1 — research, design, and
+        delivery.</p>
+      <div class="cs-meta">
+        <span class="chip">Role · Product Manager (owner)</span>
+        <span class="chip">Stage · Pre-launch</span>
+        <span class="chip">Scope · Research → Design → Delivery</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero screenshot -->
+  <div class="wrap" style="margin-bottom:40px;">
+    <figure class="shot full reveal">
+      <img src="/assets/screenshots/01-wealth-dashboard.png" alt="Arzìqi Wealth Dashboard — net worth, asset/liability tiles, trend, allocation" />
+      <figcaption>The Personal Net Worth dashboard — the product's home surface.
+        <span class="slot-note">screenshot: 01-wealth-dashboard.png</span></figcaption>
+    </figure>
+  </div>
+
+  <!-- At a glance -->
+  <section style="padding-top:20px;">
+    <div class="wrap">
+      <div class="glance reveal">
+        <div class="box"><h4>What it is</h4><p>One trusted view of what an owner-operator owns, owes, and controls — across banks, FX, crypto, brokerage, real estate, and business entities.</p></div>
+        <div class="box"><h4>My role</h4><p>0→1 owner. Joined before any frontend existed; drove research, brand, the design system, roadmap, and delivery — and helped recruit the founding engineers.</p></div>
+        <div class="box"><h4>Key decisions</h4><p>Make trust first-class; separate personal &amp; business; build the design system from scratch; ship real data, not fabricated charts.</p></div>
+        <div class="box"><h4>Status</h4><p>Pre-launch, closed-beta-ready. V1 shipped, V2 partially shipped. 100+ merge requests authored across the stack.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Problem -->
+  <section class="prose">
+    <div class="wrap narrow">
+      <p class="section-label reveal">The problem</p>
+      <p class="pull reveal">"An owner-operator's wealth is scattered and untrustworthy — no single view."</p>
+      <p class="reveal">Their money lives across personal and business accounts, domiciliary/FX balances, crypto, real
+        estate, private company stakes, PDFs, and email — and there's no aggregation layer that reaches African
+        institutions. So they fall back on spreadsheets, screenshots, bank apps, and accountants, and end up with a
+        weak, stale, low-trust picture of their net worth, with personal and business finances blurred together.</p>
+      <p class="reveal">The founder and I validated this with surveys across a few groups and 1:1 interviews on how
+        people actually track their net worth. The answers varied wildly — and that variance <em>was</em> the insight:
+        owner-operators track wealth completely differently and hold completely different asset mixes. That's exactly
+        why Arzìqi had to be multi-source and evidence-led, not a single-method tracker.</p>
+    </div>
+    <div class="wrap narrow" style="margin-top:26px;">
+      <div class="map reveal">
+        <div class="from"><b>Scattered</b><br><span class="muted">many accounts, currencies, asset types</span></div>
+        <div class="arrow">→</div>
+        <div class="to">Multi-source ingestion (email, open banking, exchanges, brokerage, manual)</div>
+      </div>
+      <div class="map reveal">
+        <div class="from"><b>Untrustworthy</b><br><span class="muted">stale, opaque, unclear-source values</span></div>
+        <div class="arrow">→</div>
+        <div class="to">Source + evidence + freshness on every value</div>
+      </div>
+      <div class="map reveal">
+        <div class="from"><b>No single view</b><br><span class="muted">no aggregation layer</span></div>
+        <div class="arrow">→</div>
+        <div class="to">One Personal Net Worth dashboard</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Who it's for -->
+  <section class="prose" style="padding-top:0;">
+    <div class="wrap narrow">
+      <p class="section-label reveal">Who it's for — a focus decision</p>
+      <p class="reveal">I focused on the <strong>owner-operator</strong> because their finances are the most fragmented —
+        which is precisely where an aggregation product creates the most value. Individual users showed strong interest
+        too, but I kept them as a secondary, default experience and deliberately did <em>not</em> reposition Arzìqi as a
+        consumer budgeting app. Serving the hardest user well was the bet.</p>
+    </div>
+  </section>
+
+  <!-- Starting point -->
+  <section class="prose" style="padding-top:0;">
+    <div class="wrap narrow">
+      <p class="section-label reveal">Starting point &amp; my role</p>
+      <p class="reveal">The founder handed me a concept — called Azana at the time — and a semi-finished product
+        document. A backend prototype existed, but there was <strong>no frontend or UI at all</strong>: the entire
+        user-facing product was still to be defined and built. Over the first two weeks I ran research, set a brand
+        identity, and moved into design; I also <strong>led the recruitment of the three founding engineers</strong>
+        who built the foundation. From there I owned the product end-to-end through to its current pre-launch state —
+        sequencing the 0→1 deliberately (research → brand → design system → delivery) with data trust as the through-line.</p>
+    </div>
+  </section>
+
+  <!-- Decisions -->
+  <section>
+    <div class="wrap">
+      <p class="section-label reveal">Four decisions</p>
+      <p class="lead reveal" style="max-width:60ch;margin-bottom:34px;">Each ladders back to the one-line problem —
+        <em>scattered and untrustworthy, no single view</em> — and each is traceable to real work that shipped.</p>
+      <div class="decisions">
+        <div class="decision reveal">
+          <div class="num">01</div>
+          <div class="type">Framing</div>
+          <h3>Make trust a visible product primitive</h3>
+          <dl>
+            <dt>Context</dt><dd>Net worth is assembled from sources of very different reliability; one number hides how trustworthy each input is.</dd>
+            <dt>Decision</dt><dd>Made source, evidence, and freshness first-class, visible concepts on every value — with a recovery path for stale ones.</dd>
+            <dt>Why</dt><dd>The core failure was trust, not just fragmentation. Aggregating alone would just produce a prettier untrustworthy number.</dd>
+            <dt>Outcome</dt><dd>The product tells the truth about its own data; manual entry legitimized as a real valuation mode.</dd>
+          </dl>
+        </div>
+        <div class="decision reveal">
+          <div class="num">02</div>
+          <div class="type">Focus</div>
+          <h3>Separate personal &amp; business by design</h3>
+          <dl>
+            <dt>Context</dt><dd>The owner-operator's defining trait is a blurred personal/business line; naive net worth misleads either way.</dd>
+            <dt>Decision</dt><dd>Built a strict entity model (default Personal + Business entities), ownership as a Personal equity holding, and no blended cross-entity totals.</dd>
+            <dt>Why</dt><dd>Serve the hardest user precisely — while refusing to drift into consumer budgeting or SME-first accounting.</dd>
+            <dt>Outcome</dt><dd>Per-entity dashboards + an All-Entities overview without double-counting; cut the premature enterprise surface.</dd>
+          </dl>
+        </div>
+        <div class="decision reveal">
+          <div class="num">03</div>
+          <div class="type">Design</div>
+          <h3>Build the design language, not just screens</h3>
+          <dl>
+            <dt>Context</dt><dd>As designer-PM with no existing frontend, "calm, premium, high-trust" had to become a real, consistent interface.</dd>
+            <dt>Decision</dt><dd>Designed and built a from-scratch design system (tokens → primitives → shell → pages) with trust-encoding primitives (source chips, calm sparklines).</dd>
+            <dt>Why</dt><dd>In fintech, trust is aesthetic as much as functional; a design system makes consistency itself a trust signal.</dd>
+            <dt>Outcome</dt><dd>A coherent system across the app, light and dark — the product feels as trustworthy as its data discipline.</dd>
+          </dl>
+        </div>
+        <div class="decision reveal">
+          <div class="num">04</div>
+          <div class="type">Delivery</div>
+          <h3>Ship the truth, not a prettier lie</h3>
+          <dl>
+            <dt>Context</dt><dd>The hero net-worth trend chart was a stubbed, flat fake line — the exact failure the product exists to fix.</dd>
+            <dt>Decision</dt><dd>Refused to ship fabricated history; drove a real backend trend endpoint computed from actual historical sources.</dd>
+            <dt>Why</dt><dd>The problem is "untrustworthy" — a fake hero chart would undermine the whole thesis.</dd>
+            <dt>Outcome</dt><dd>A real, period-filterable trend with an honest empty state. The flagship chart tells the truth.</dd>
+          </dl>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Screens: framing + anomalies -->
+  <section style="padding-top:0;">
+    <div class="wrap">
+      <p class="section-label reveal">Trust, made visible</p>
+      <div class="shots reveal">
+        <figure class="shot">
+          <img src="/assets/screenshots/02-asset-detail-freshness.png" alt="Asset detail with a freshness recovery callout and source chip" />
+          <figcaption>Evidence &amp; freshness on an asset — stale values surface a recovery path.
+            <span class="slot-note">02-asset-detail-freshness.png</span></figcaption>
+        </figure>
+        <figure class="shot">
+          <img src="/assets/screenshots/04-anomalies.png" alt="Anomalies that name the merchant and the specific deviation" />
+          <figcaption>Anomalies that name the merchant and the specific deviation — reconciliation as clarity.
+            <span class="slot-note">04-anomalies.png</span></figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- Craft showcase -->
+  <section style="padding-top:0;">
+    <div class="wrap">
+      <p class="section-label reveal">Craft</p>
+      <div class="shots reveal">
+        <figure class="shot">
+          <img src="/assets/screenshots/01b-wealth-dashboard-dark.png" alt="Wealth dashboard in dark mode" />
+          <figcaption>The design system in dark mode.<span class="slot-note">01b-wealth-dashboard-dark.png</span></figcaption>
+        </figure>
+        <figure class="shot">
+          <img src="/assets/screenshots/03-assets-liabilities.png" alt="Assets and liabilities list" />
+          <figcaption>Assets &amp; liabilities, source-backed.<span class="slot-note">03-assets-liabilities.png</span></figcaption>
+        </figure>
+        <figure class="shot">
+          <img src="/assets/screenshots/05-investments-brokerage.png" alt="Investments and brokerage holdings" />
+          <figcaption>Brokerage holdings — Naira and Dollar stocks.<span class="slot-note">05-investments-brokerage.png</span></figcaption>
+        </figure>
+        <figure class="shot">
+          <img src="/assets/screenshots/06-transactions.png" alt="Transactions list" />
+          <figcaption>Normalized transactions.<span class="slot-note">06-transactions.png</span></figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- Outcome -->
+  <section class="prose" style="padding-top:0;">
+    <div class="wrap narrow">
+      <p class="section-label reveal">Outcome &amp; status</p>
+      <p class="reveal">Arzìqi is pre-launch and closed-beta-ready. V1 (ingestion, parsing, transactions, dashboards,
+        anomalies, assets/liabilities) is shipped; V2 (the Personal Net Worth dashboard, source-backed records, market
+        pricing, evidence documents, the entity model, and billing) is partially shipped. I authored <strong>100+ merge
+        requests</strong> across the rebrand, design system, entity model, onboarding, parser reliability, security, and
+        the wealth dashboard.</p>
+      <p class="muted reveal" style="font-size:.95rem;">The product hasn't launched, so there are no traction metrics to
+        claim — the value here is the product judgment, the craft, and the launch-readiness.</p>
+    </div>
+  </section>
+
+  <!-- Reflection -->
+  <section class="prose" style="padding-top:0;">
+    <div class="wrap narrow">
+      <p class="section-label reveal">Reflection</p>
+      <p class="reveal">If I started again, I'd change the <strong>email-first entry</strong>. Leading new users into a
+        mandatory email-connection pipeline assumed everyone's first move was to connect a mailbox; I later reframed
+        onboarding to be asset/wealth-first, letting users add any account first. The lesson stuck because I didn't just
+        note it — I shipped the correction.</p>
+      <!-- TODO (Grant): add your answer to "what I learned about being a PM" here. -->
+      <!-- TODO (Grant): optionally add the resolution of the landing-page redesign disagreement as a short story. -->
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <div class="wrap">
+      <div class="contact reveal">
+        <h2>Want the deeper version?</h2>
+        <p>Happy to walk through the decisions, the tradeoffs, and what I'd do next — over a call or a coffee.</p>
+        <div class="links">
+          <a class="btn btn-primary" href="mailto:jerrygrantmax@gmail.com">Email me</a>
+          <a class="btn btn-ghost" href="https://linkedin.com/in/jerry-grant" target="_blank" rel="noopener">LinkedIn</a>
+          <a class="btn btn-ghost" href="/">Back to home</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="wrap">© <span id="year"></span> Grant Maxwell · Arzìqi case study.</div>
+  </footer>
+
+  <script src="/scripts/main.js"></script>
+</body>
+</html>
