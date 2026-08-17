@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Model Evaluation — Case Study · Grant Maxwell</title>
+  <meta name="description" content="Evaluating large language models: making AI-generated code reliable enough to ship. The other half of a career spent on trust in complex systems." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,560&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/styles/main.css" />
+</head>
+<body>
+  <nav class="nav" id="nav">
+    <div class="wrap nav-inner">
+      <a class="brand" href="/">Grant Maxwell</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Menu">☰</button>
+      <div class="nav-links" id="navLinks">
+        <a href="/#work">Work</a>
+        <a href="/#about">About</a>
+        <a href="/#skills">Skills</a>
+        <a class="nav-cta" href="/#contact">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="cs-hero">
+    <div class="wrap">
+      <a class="back" href="/">← Back to home</a>
+      <p class="eyebrow" style="margin-top:22px;">Case study · AI Evaluation</p>
+      <h1>Making AI output reliable enough to ship.</h1>
+      <p class="lead" style="max-width:52ch;margin-top:20px;">The other half of the same discipline: where Arzìqi is
+        about trusting financial data, this work was about trusting what a large language model produces — evaluating
+        AI-generated code for correctness and production-readiness.</p>
+      <div class="cs-meta">
+        <span class="chip">Role · AI Model Evaluator (LLMs)</span>
+        <span class="chip">Anthropic — via Turing</span>
+        <span class="chip">Remote</span>
+      </div>
+    </div>
+  </header>
+
+  <section style="padding-top:30px;">
+    <div class="wrap">
+      <div class="glance reveal">
+        <div class="box"><h4>The work</h4><p>Evaluate AI-generated Rust code for correctness, completeness, and production-readiness inside large language models.</p></div>
+        <div class="box"><h4>The lens</h4><p>Not "does it look right" — "would a developer actually ship this?" Judgment under ambiguity, at the boundary of what the model gets right.</p></div>
+        <div class="box"><h4>The method</h4><p>Comparative analysis of model outputs, structured qualitative + quantitative feedback, evaluation metadata in Git-based workflows.</p></div>
+        <div class="box"><h4>The outcome</h4><p>Feedback that improved model reliability and lifted developer usability — turning evaluation signal into iterative model improvement.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="prose" style="padding-top:0;">
+    <div class="wrap narrow">
+      <p class="section-label reveal">Why this matters</p>
+      <p class="pull reveal">A model that sounds confident but can't be trusted does real damage — the same failure Arzìqi exists to prevent, in a different domain.</p>
+      <p class="reveal">AI-generated code is the sharp end of the trust problem: it's fluent, plausible, and often subtly
+        wrong. My job was to be the human who tells the difference — rigorously, repeatably, and in a way that feeds
+        back into a better model. That's product-adjacent evaluation work: defining what "good" means, then judging
+        against it consistently enough that the signal is useful.</p>
+    </div>
+  </section>
+
+  <section style="padding-top:0;">
+    <div class="wrap">
+      <p class="section-label reveal">What I hunted for</p>
+      <div class="decisions reveal">
+        <div class="decision">
+          <div class="type">Failure mode</div>
+          <h3>Hallucinations</h3>
+          <p class="muted">Confident, fluent output that invents APIs, behavior, or facts that don't exist — the most dangerous because it's the most convincing.</p>
+        </div>
+        <div class="decision">
+          <div class="type">Failure mode</div>
+          <h3>Instruction-following gaps</h3>
+          <p class="muted">Output that drifts from the actual task — solving a nearby problem, ignoring a constraint, or quietly changing the spec.</p>
+        </div>
+        <div class="decision">
+          <div class="type">Failure mode</div>
+          <h3>Reasoning errors</h3>
+          <p class="muted">Logic that breaks under scrutiny — right-looking steps that don't actually compose into a correct result.</p>
+        </div>
+        <div class="decision">
+          <div class="type">Failure mode</div>
+          <h3>Incompleteness &amp; production-readiness</h3>
+          <p class="muted">Code that "works" in the happy path but isn't correct, complete, or usable enough for a developer to actually ship.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="prose" style="padding-top:0;">
+    <div class="wrap narrow">
+      <p class="section-label reveal">How it connects to my product work</p>
+      <p class="reveal">Both sides of my work answer the same question — <strong>can you trust what this system is telling
+        you?</strong> In Arzìqi, I make fragmented financial data trustworthy enough to act on. In model evaluation, I
+        make AI output reliable enough to ship. Both require defining "trustworthy" precisely, judging against it
+        consistently, and caring most about the failures that hide behind a confident surface. That instinct — for the
+        gap between <em>looks right</em> and <em>is right</em> — is the throughline of how I build and assess products.</p>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="wrap">
+      <div class="contact reveal">
+        <h2>Two domains, one instinct.</h2>
+        <p>Happy to talk through evaluation frameworks, fintech product, or where AI and trust meet.</p>
+        <div class="links">
+          <a class="btn btn-primary" href="mailto:jerrygrantmax@gmail.com">Email me</a>
+          <a class="btn btn-ghost" href="/arziqi">Arzìqi case study</a>
+          <a class="btn btn-ghost" href="/">Back to home</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="wrap">© <span id="year"></span> Grant Maxwell · AI evaluation case study.</div>
+  </footer>
+
+  <script src="/scripts/main.js"></script>
+</body>
+</html>
