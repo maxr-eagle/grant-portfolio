@@ -19,7 +19,7 @@
   <link rel="apple-touch-icon" href="/assets/icon-180.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,560&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="/styles/main.css" />
 </head>
 <body>
@@ -28,29 +28,36 @@
       <a class="brand" href="/">Grant Maxwell</a>
       <button class="nav-toggle" id="navToggle" aria-label="Menu">☰</button>
       <div class="nav-links" id="navLinks">
+        <a href="#capabilities">Capabilities</a>
         <a href="#work">Work</a>
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a class="nav-cta" href="#contact">Contact</a>
+        <a href="#approach">Approach</a>
+        <a href="#faq">FAQ</a>
+        <a class="nav-cta" href="#contact">Connect</a>
       </div>
     </div>
   </nav>
 
+  <!-- Hero -->
   <header class="hero">
     <div class="wrap">
-      <p class="eyebrow reveal">Product Manager · Fintech 0→1 + AI Evaluation</p>
-      <h1 class="reveal">I build and evaluate trust in complex systems.</h1>
-      <p class="lead reveal">From a user's net worth to an AI model's output, I turn messy, high-stakes systems into
-        products people can rely on. Right now I'm owning <strong>Arzìqi</strong> — a wealth command center for African
-        owner-operators — from concept to launch.</p>
-      <div class="hero-chips reveal">
-        <span class="chip"><span class="dot"></span>Fintech 0→1</span>
-        <span class="chip"><span class="dot"></span>AI Product Evaluation</span>
-        <span class="chip"><span class="dot"></span>Research → Design → Delivery</span>
-      </div>
-      <div class="hero-cta reveal">
-        <a class="btn btn-primary" href="/arziqi">View the Arzìqi case study →</a>
-        <a class="btn btn-ghost" href="#contact">Get in touch</a>
+      <div class="hero-grid">
+        <div>
+          <p class="eyebrow reveal">Product Manager · Fintech 0→1 + AI Evaluation</p>
+          <h1 class="reveal">I build and <span class="i">evaluate</span> <span class="b">trust</span> in <span class="b">complex systems.</span></h1>
+          <div class="triad reveal">
+            <div class="row"><span class="k">Builder</span><span class="v">I take products from concept to launch — research, design, and delivery.</span></div>
+            <div class="row"><span class="k">Bridge</span><span class="v">I sit between the founder's vision, the engineers, and the people who'll actually use it.</span></div>
+            <div class="row"><span class="k">Trust</span><span class="v">I care most about whether people can rely on what we ship — a user's net worth, or an AI's output.</span></div>
+          </div>
+          <div class="hero-cta reveal">
+            <a class="btn btn-primary" href="/arziqi">View the Arzìqi case study →</a>
+            <a class="btn btn-ghost" href="#contact">Get in touch</a>
+          </div>
+        </div>
+        <div class="hero-photo reveal">
+          <!-- Add your photo as /assets/photo.jpg (portrait, ~4:5). Placeholder shown until then. -->
+          <div class="ph">Add your photo →<br />assets/photo.jpg</div>
+        </div>
       </div>
     </div>
   </header>
@@ -69,15 +76,58 @@
     </div>
   </section>
 
-  <!-- Get to know me -->
-  <section style="padding-top:20px;">
+  <!-- Capabilities -->
+  <section id="capabilities">
     <div class="wrap">
-      <p class="section-label reveal">Get to know me &amp; my work</p>
-      <div class="navgrid reveal">
-        <a class="navtile" href="#about"><span class="ic">👋</span><span><span class="t">About me &amp; how I work</span><span class="d">The switcher story, and how I operate</span></span><span class="arr">→</span></a>
-        <a class="navtile" href="#work"><span class="ic">📌</span><span><span class="t">Selected work</span><span class="d">Arzìqi &amp; AI model evaluation</span></span><span class="arr">→</span></a>
-        <a class="navtile" href="#skills"><span class="ic">🧰</span><span><span class="t">What I do</span><span class="d">Product · AI evaluation · craft</span></span><span class="arr">→</span></a>
-        <a class="navtile" href="#contact"><span class="ic">✉️</span><span><span class="t">Let's talk</span><span class="d">Open to PM roles in fintech &amp; AI</span></span><span class="arr">→</span></a>
+      <p class="section-label reveal">Capabilities</p>
+      <h2 class="reveal" style="margin-bottom:28px;">Where I'm most useful.</h2>
+      <div class="caps">
+        <div class="cap reveal"><div class="ic">🧭</div><h3>Product 0→1</h3><p>User research, roadmap and prioritization, PRDs, and taking a concept all the way to launch.</p></div>
+        <div class="cap reveal"><div class="ic">🎨</div><h3>Design &amp; UX</h3><p>Design systems, prototyping, and the experience on the surface — I own the craft, not just the spec.</p></div>
+        <div class="cap reveal"><div class="ic">🛡️</div><h3>Ingestion &amp; data trust</h3><p>Source, evidence, and freshness on every value; reconciliation and multi-source financial data.</p></div>
+        <div class="cap reveal"><div class="ic">🤖</div><h3>AI evaluation</h3><p>Model quality assessment, hallucination detection, and human-in-the-loop judgment of AI output.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Selected work -->
+  <section id="work" style="padding-top:0;">
+    <div class="wrap">
+      <p class="section-label reveal">Selected work</p>
+      <p class="lead reveal" style="max-width:60ch;margin:-4px 0 28px;">Two projects, one thread. Click into each for
+        the role I played, the decisions I made, and what came of them.</p>
+      <div class="work-grid">
+        <a class="card card-featured reveal" href="/arziqi">
+          <span class="kicker">Case study · Fintech 0→1</span>
+          <h3>Turning scattered finances into one trusted view</h3>
+          <p class="role">Arzìqi — wealth command center · Product Manager (owner) · pre-launch</p>
+          <p>Brought in at concept — before any frontend existed — to own the product end-to-end. Made trust a
+            first-class product concept: source, evidence, and freshness on every value, one honest net-worth view, and
+            a design system built from scratch.</p>
+          <div class="tags">
+            <span class="tag">0→1 ownership</span>
+            <span class="tag">Design system</span>
+            <span class="tag">Ingestion &amp; trust</span>
+            <span class="tag">Entity model</span>
+          </div>
+          <span class="more">Read the case study →</span>
+        </a>
+
+        <a class="card reveal" href="/ai-evaluation">
+          <span class="kicker">Case study · AI Evaluation</span>
+          <h3>Catching the failures that hide behind confident AI</h3>
+          <p class="role">LLM evaluation · Anthropic (via Turing) · remote</p>
+          <p>Evaluated AI-generated Rust code for correctness, completeness, and production-readiness; ran comparative
+            analysis of LLM outputs to catch hallucinations, instruction-following gaps, and reasoning errors, and
+            delivered structured feedback that improved model reliability and developer usability.</p>
+          <div class="tags">
+            <span class="tag">Model quality</span>
+            <span class="tag">Hallucination detection</span>
+            <span class="tag">Human-in-the-loop</span>
+            <span class="tag">Comparative analysis</span>
+          </div>
+          <span class="more">Read the case study →</span>
+        </a>
       </div>
     </div>
   </section>
@@ -94,100 +144,55 @@
     </div>
   </section>
 
-  <!-- Selected work -->
-  <section id="work">
+  <!-- Approach / How I work -->
+  <section id="approach">
     <div class="wrap">
-      <p class="section-label reveal">Selected work</p>
-      <p class="lead reveal" style="max-width:60ch;margin:-4px 0 28px;">Two projects, one thread. Click into each for
-        the role I played, the decisions I made, and what came of them.</p>
-      <div class="work-grid">
-        <a class="card card-featured reveal" href="/arziqi">
-          <span class="kicker">Case study · Fintech 0→1</span>
-          <h3>Arzìqi — a wealth command center for African owner-operators</h3>
-          <p class="role">Product Manager (owner) · pre-launch · research → design → delivery</p>
-          <p>Brought in at concept — before any frontend existed — to own the product end-to-end. Made trust a
-            first-class product concept: source, evidence, and freshness on every value, one honest net-worth view, and
-            a design system built from scratch.</p>
-          <div class="tags">
-            <span class="tag">0→1 ownership</span>
-            <span class="tag">Design system</span>
-            <span class="tag">Ingestion &amp; trust</span>
-            <span class="tag">Entity model</span>
-          </div>
-          <span class="more">Read the case study →</span>
-        </a>
+      <p class="section-label reveal">How I work</p>
+      <h2 class="reveal" style="margin-bottom:30px;">The way I plug in.</h2>
+      <div class="process">
+        <div class="step reveal"><div class="n">01</div><h3>Start with the evidence</h3><p>Research and the real problem before pixels — I want to know how people actually behave, not assume it.</p></div>
+        <div class="step reveal"><div class="n">02</div><h3>Design the system, not just screens</h3><p>A coherent, trustworthy whole — the system under the hood and the experience on the surface.</p></div>
+        <div class="step reveal"><div class="n">03</div><h3>Ship, instrument, refine</h3><p>Real data, honest states, and iteration — I'd rather ship the truth than a prettier version of it.</p></div>
+      </div>
+    </div>
+  </section>
 
-        <a class="card reveal" href="/ai-evaluation">
-          <span class="kicker">Case study · AI Evaluation</span>
-          <h3>AI Model Evaluation — Large Language Models</h3>
-          <p class="role">Anthropic (via Turing) · remote</p>
-          <p>Evaluated AI-generated Rust code for correctness, completeness, and production-readiness; ran comparative
-            analysis of LLM outputs to catch hallucinations, instruction-following gaps, and reasoning errors, and
-            delivered structured feedback that improved model reliability and developer usability.</p>
-          <div class="tags">
-            <span class="tag">Model quality</span>
-            <span class="tag">Hallucination detection</span>
-            <span class="tag">Human-in-the-loop</span>
-            <span class="tag">Comparative analysis</span>
-          </div>
-          <span class="more">Read the case study →</span>
-        </a>
+  <!-- Testimonial -->
+  <section id="words" style="padding-top:0;">
+    <div class="wrap">
+      <p class="section-label reveal">In their words</p>
+      <div class="quote reveal">
+        <!-- TODO (Grant): replace with a real quote — ask Mensaah (founder) or a founding engineer for one or two lines. -->
+        <p>“Add a short testimonial here — one or two lines from the founder or a founding engineer about working with you.”</p>
+        <div class="by">— Name, Role · <span class="muted">to add</span></div>
       </div>
     </div>
   </section>
 
   <!-- About -->
-  <section id="about">
+  <section id="about" style="padding-top:0;">
     <div class="wrap narrow about">
       <p class="section-label reveal">About</p>
-      <p class="reveal">I'm a product manager who came into tech from <strong>chemical engineering</strong>. I started
-        the Product Management track at <strong>AltSchool Africa</strong> and wanted real 0→1 experience — so I joined
-        Arzìqi at the concept stage, before there was a frontend, and owned it through <strong>research, brand, design,
-        and delivery</strong>, helping recruit the founding engineering team along the way.</p>
+      <p class="reveal">I came into tech from <strong>chemical engineering</strong>. I started the Product Management
+        track at <strong>AltSchool Africa</strong> and wanted real 0→1 experience — so I joined Arzìqi at the concept
+        stage, before there was a frontend, and owned it through <strong>research, brand, design, and delivery</strong>,
+        helping recruit the founding engineering team along the way.</p>
       <p class="reveal">I care about products that are honest with the people using them — especially where the stakes
         are high. Money and machine intelligence are two places where a system that looks confident but can't be
         trusted does real damage. That's the thread between the fintech product I build and the AI models I evaluate.</p>
     </div>
   </section>
 
-  <!-- Skills -->
-  <section id="skills" style="padding-top:0;">
-    <div class="wrap">
-      <p class="section-label reveal">What I do</p>
-      <div class="skills reveal">
-        <div>
-          <h4>Product</h4>
-          <ul>
-            <li>0→1 product ownership</li>
-            <li>User research</li>
-            <li>Roadmap &amp; prioritization</li>
-            <li>PRDs &amp; user stories</li>
-            <li>Design systems</li>
-            <li>Cross-functional delivery</li>
-            <li>KPI definition</li>
-          </ul>
-        </div>
-        <div>
-          <h4>AI &amp; evaluation</h4>
-          <ul>
-            <li>AI product evaluation</li>
-            <li>Model quality assessment</li>
-            <li>Hallucination detection</li>
-            <li>Human-in-the-loop systems</li>
-            <li>Prompt &amp; output evaluation</li>
-            <li>Comparative analysis</li>
-          </ul>
-        </div>
-        <div>
-          <h4>Craft &amp; tools</h4>
-          <ul>
-            <li>UX/UI design &amp; prototyping</li>
-            <li>Figma</li>
-            <li>Git / GitLab workflows</li>
-            <li>Jira · Notion · Slack</li>
-            <li>Analytics &amp; experimentation</li>
-          </ul>
-        </div>
+  <!-- FAQ -->
+  <section id="faq" style="padding-top:0;">
+    <div class="wrap narrow">
+      <p class="section-label reveal">FAQ</p>
+      <h2 class="reveal" style="margin-bottom:16px;">A few questions people usually ask.</h2>
+      <div class="faq reveal">
+        <details><summary>What kind of roles are you looking for?</summary><p>Product Manager roles in fintech and AI — ideally 0→1 or early-stage, where I can own research through delivery. Remote or hybrid.</p></details>
+        <details><summary>Do you just write specs, or do you build?</summary><p>Both. On Arzìqi I owned the user research, the UI/UX and design system, the roadmap, and delivery — and helped recruit the founding engineers. I'm a designer-PM who ships.</p></details>
+        <details><summary>What's your background?</summary><p>Chemical engineering → tech → the Product Management track at AltSchool Africa → owning Arzìqi from concept to pre-launch. The AI-evaluation work (Anthropic via Turing) sits alongside it.</p></details>
+        <details><summary>Where are you based?</summary><p>Remote, in Nigeria — working across time zones with distributed teams.</p></details>
       </div>
     </div>
   </section>
