@@ -198,6 +198,26 @@ a.card:hover { transform: translateY(-3px); box-shadow: var(--shadow); border-co
 .contact a.btn-ghost { border-color: var(--dark-line); color: var(--dark-ink) !important; }
 footer { padding: 40px 0; color: var(--faint); font-size: .88rem; text-align: center; }
 
+/* ---------- "get to know me" nav grid ---------- */
+.navgrid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.navtile {
+  display: flex; align-items: center; gap: 16px; background: var(--surface);
+  border: 1px solid var(--line); border-radius: var(--r); padding: 22px 24px;
+  color: var(--ink); transition: transform .2s ease, box-shadow .2s ease, border-color .2s;
+}
+.navtile:hover { transform: translateY(-2px); box-shadow: var(--shadow); border-color: var(--accent); color: var(--ink); }
+.navtile .ic { font-size: 1.55rem; line-height: 1; }
+.navtile .t { font-weight: 600; font-size: 1.05rem; display: block; }
+.navtile .d { font-size: .88rem; color: var(--muted); margin-top: 2px; display: block; }
+.navtile .arr { margin-left: auto; color: var(--accent); font-weight: 700; }
+
+/* ---------- by the numbers ---------- */
+.stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.stat { text-align: center; padding: 18px; }
+.stat .n { font-family: var(--serif); font-size: clamp(2.4rem, 5vw, 3.4rem); color: var(--ink); line-height: 1; letter-spacing: -.02em; }
+.stat .l { color: var(--muted); font-size: .95rem; margin-top: 10px; }
+.stat + .stat { border-left: 1px solid var(--line); }
+
 /* ---------- reveal animation ---------- */
 .reveal { opacity: 0; transform: translateY(16px); transition: opacity .7s ease, transform .7s ease; }
 .reveal.in { opacity: 1; transform: none; }
@@ -208,11 +228,14 @@ footer { padding: 40px 0; color: var(--faint); font-size: .88rem; text-align: ce
   .skills, .glance { grid-template-columns: 1fr 1fr; }
   .decisions, .shots, .map { grid-template-columns: 1fr; }
   .map .arrow { display: none; }
+  .navgrid { grid-template-columns: 1fr; }
 }
 @media (max-width: 620px) {
   body { font-size: 16px; }
   section { padding: 68px 0; }
   .skills, .glance { grid-template-columns: 1fr; }
+  .stats { grid-template-columns: 1fr; }
+  .stat + .stat { border-left: 0; border-top: 1px solid var(--line); }
   .band, .contact { padding: 40px 26px; }
   .nav-links { display: none; }
   .nav-links.open {
