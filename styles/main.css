@@ -4,28 +4,28 @@
    ============================================================ */
 
 :root {
-  --bg:        #faf8f4;
+  --bg:        #ffffff;
   --surface:   #ffffff;
-  --panel:     #f3eee5;
-  --ink:       #201d19;
-  --muted:     #6a6258;
-  --faint:     #93897b;
-  --line:      #e7dfd2;
-  --accent:    #3d54d6;   /* indigo-blue */
-  --accent-2:  #2a3aa8;
-  --accent-lt: #93a7ff;   /* light accent for dark surfaces */
-  --sage:      #3f6b3a;
-  --dark:      #1a1512;
-  --dark-ink:  #f4efe7;
-  --dark-mut:  #b6aa98;
-  --dark-line: #3a3128;
+  --panel:     #f2f2f2;
+  --ink:       #0a0a0a;
+  --muted:     #565656;
+  --faint:     #8c8c8c;
+  --line:      #e4e4e4;
+  --accent:    #0a0a0a;   /* mono — black */
+  --accent-2:  #000000;
+  --accent-lt: #ffffff;   /* accent on dark surfaces = white */
+  --sage:      #0a0a0a;
+  --dark:      #0a0a0a;
+  --dark-ink:  #ffffff;
+  --dark-mut:  #b0b0b0;
+  --dark-line: #2a2a2a;
 
   --serif: "Fraunces", Georgia, "Times New Roman", serif;
   --sans:  "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 
   --wrap: 1080px;
   --r: 14px;
-  --shadow: 0 1px 2px rgba(30,24,18,.04), 0 12px 32px -12px rgba(30,24,18,.14);
+  --shadow: 0 1px 2px rgba(0,0,0,.05), 0 12px 32px -12px rgba(0,0,0,.16);
 }
 
 * { box-sizing: border-box; }
@@ -73,7 +73,7 @@ a:hover { color: var(--accent); }
 }
 .nav.scrolled { border-color: var(--line); }
 .nav-inner { display: flex; align-items: center; justify-content: space-between; height: 64px; }
-.brand { font-family: var(--serif); font-size: 1.15rem; font-weight: 600; color: var(--ink); letter-spacing: -.01em; }
+.brand { font-family: var(--serif); font-size: 1.6rem; font-weight: 700; color: var(--ink); letter-spacing: -.025em; }
 .brand:hover { color: var(--ink); }
 .nav-links { display: flex; gap: 28px; align-items: center; }
 .nav-links a { font-size: .95rem; color: var(--muted); font-weight: 500; }
@@ -207,6 +207,7 @@ footer { padding: 40px 0; color: var(--faint); font-size: .88rem; text-align: ce
 .hero-photo img {
   width: 100%; max-width: 360px; aspect-ratio: 4/5; object-fit: cover; margin-left: auto;
   border-radius: 20px; border: 1px solid var(--line); box-shadow: var(--shadow); background: var(--panel); display: block;
+  filter: grayscale(1) contrast(1.03);
 }
 .hero-photo .ph {
   width: 100%; max-width: 360px; aspect-ratio: 4/5; margin-left: auto; display: flex; align-items: center; justify-content: center;
