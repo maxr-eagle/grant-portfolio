@@ -1,24 +1,24 @@
 /* ============================================================
-   Grant Maxwell — Portfolio. Hand-crafted, dependency-free.
-   Palette + type are a small design system (calm, premium, warm).
+   Grant Jerry — Portfolio. Hand-crafted, dependency-free.
+   Monochrome: black background, white text.
    ============================================================ */
 
 :root {
-  --bg:        #ffffff;
-  --surface:   #ffffff;
-  --panel:     #f2f2f2;
-  --ink:       #0a0a0a;
-  --muted:     #565656;
-  --faint:     #8c8c8c;
-  --line:      #e4e4e4;
-  --accent:    #0a0a0a;   /* mono — black */
-  --accent-2:  #000000;
-  --accent-lt: #ffffff;   /* accent on dark surfaces = white */
-  --sage:      #0a0a0a;
-  --dark:      #0a0a0a;
-  --dark-ink:  #ffffff;
-  --dark-mut:  #b0b0b0;
-  --dark-line: #2a2a2a;
+  --bg:        #0b0b0b;   /* black background */
+  --surface:   #161616;   /* cards, a hair lighter than bg */
+  --panel:     #1e1e1e;   /* chips / tags */
+  --ink:       #f4f4f4;   /* white text */
+  --muted:     #a6a6a6;
+  --faint:     #707070;
+  --line:      #2b2b2b;
+  --accent:    #ffffff;   /* mono — white */
+  --accent-2:  #ffffff;
+  --accent-lt: #0a0a0a;   /* accent on the white contrast blocks = black */
+  --sage:      #ffffff;
+  --dark:      #ffffff;   /* band + contact invert to white blocks */
+  --dark-ink:  #0a0a0a;
+  --dark-mut:  #555555;
+  --dark-line: #e4e4e4;
 
   --serif: "Fraunces", Georgia, "Times New Roman", serif;
   --sans:  "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
@@ -195,7 +195,7 @@ a.card:hover { transform: translateY(-3px); box-shadow: var(--shadow); border-co
 .contact p { color: var(--dark-mut); max-width: 46ch; margin: 14px auto 26px; }
 .contact .links { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
 .contact a.btn-primary { background: var(--accent-lt); color: var(--dark) !important; }
-.contact a.btn-primary:hover { background: #b4c4ff; }
+.contact a.btn-primary:hover { background: #333333; }
 .contact a.btn-ghost { border-color: var(--dark-line); color: var(--dark-ink) !important; }
 footer { padding: 40px 0; color: var(--faint); font-size: .88rem; text-align: center; }
 
@@ -207,7 +207,6 @@ footer { padding: 40px 0; color: var(--faint); font-size: .88rem; text-align: ce
 .hero-photo img {
   width: 100%; max-width: 360px; aspect-ratio: 4/5; object-fit: cover; margin-left: auto;
   border-radius: 20px; border: 1px solid var(--line); box-shadow: var(--shadow); background: var(--panel); display: block;
-  filter: grayscale(1) contrast(1.03);
 }
 .hero-photo .ph {
   width: 100%; max-width: 360px; aspect-ratio: 4/5; margin-left: auto; display: flex; align-items: center; justify-content: center;
