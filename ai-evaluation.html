@@ -4,9 +4,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>AI Model Evaluation — Case Study · Grant Maxwell</title>
-  <meta name="description" content="Evaluating large language models: making AI-generated code reliable enough to ship. The other half of a career spent on trust in complex systems." />
+  <meta name="description" content="Evaluating language models: deciding whether AI-generated code is actually good enough to ship. The other half of my work on trust." />
   <meta property="og:title" content="AI Model Evaluation — Case Study · Grant Maxwell" />
-  <meta property="og:description" content="Making AI output reliable enough to ship — evaluating LLM-generated code for correctness and production-readiness." />
+  <meta property="og:description" content="Deciding whether AI-generated code is actually good enough to ship — the machine half of my work on trust." />
   <meta property="og:type" content="article" />
   <meta property="og:url" content="https://grantjerry.vercel.app/ai-evaluation" />
   <meta property="og:image" content="https://grantjerry.vercel.app/assets/og.png" />
@@ -39,10 +39,10 @@
     <div class="wrap">
       <a class="back" href="/">← Back to home</a>
       <p class="eyebrow" style="margin-top:22px;">Case study · AI evaluation · Making machines trustworthy</p>
-      <h1>Catching the <span class="b">failures</span> that hide behind <span class="i">confident</span> AI.</h1>
-      <p class="lead" style="max-width:52ch;margin-top:20px;">The machines half of the thread. Where Arzìqi makes your
-        money trustworthy, this makes the machine trustworthy — evaluating AI-generated code for the gap between what it
-        confidently claims and what's actually correct.</p>
+      <h1>Catching the <span class="b">code</span> that's <span class="i">quietly wrong.</span></h1>
+      <p class="lead" style="max-width:52ch;margin-top:20px;">This is the other half of what I do. Arzìqi is about
+        trusting your money. This was about trusting what a language model spits out. Concretely: reading AI-generated
+        code and deciding whether it's actually correct.</p>
       <div class="cs-meta">
         <span class="chip">Role · AI Model Evaluator (LLMs)</span>
         <span class="chip">Anthropic — via Turing</span>
@@ -54,48 +54,48 @@
   <section style="padding-top:30px;">
     <div class="wrap">
       <div class="glance reveal">
-        <div class="box"><h4>The work</h4><p>Evaluate AI-generated Rust code for correctness, completeness, and production-readiness inside large language models.</p></div>
-        <div class="box"><h4>The lens</h4><p>Not "does it look right" — "would a developer actually ship this?" Judgment under ambiguity, at the boundary of what the model gets right.</p></div>
-        <div class="box"><h4>The method</h4><p>Comparative analysis of model outputs, structured qualitative + quantitative feedback, evaluation metadata in Git-based workflows.</p></div>
-        <div class="box"><h4>The outcome</h4><p>Feedback that improved model reliability and lifted developer usability — turning evaluation signal into iterative model improvement.</p></div>
+        <div class="box"><h4>The work</h4><p>Read AI-generated Rust and judge it. Is it correct, is it complete, could you actually ship it?</p></div>
+        <div class="box"><h4>The lens</h4><p>Not "does it look right" but "would a developer put this in production?" Judgment calls, right at the edge of what the model can and can't do.</p></div>
+        <div class="box"><h4>How I worked</h4><p>Compare outputs side by side, write up what's wrong and why, and leave notes that feed back into a better model.</p></div>
+        <div class="box"><h4>The result</h4><p>Feedback that made the model more reliable and easier for developers to actually work with.</p></div>
       </div>
     </div>
   </section>
 
   <section class="prose" style="padding-top:0;">
     <div class="wrap narrow">
-      <p class="section-label reveal">Why this matters</p>
-      <p class="pull reveal">A model that sounds confident but can't be trusted does real damage — the same failure Arzìqi exists to prevent, in a different domain.</p>
-      <p class="reveal">AI-generated code is the sharp end of the trust problem: it's fluent, plausible, and often subtly
-        wrong. My job was to be the human who tells the difference — rigorously, repeatably, and in a way that feeds
-        back into a better model. That's product-adjacent evaluation work: defining what "good" means, then judging
-        against it consistently enough that the signal is useful.</p>
+      <p class="section-label reveal">Why it matters</p>
+      <p class="pull reveal">A model that sounds sure of itself but is wrong does real damage. Same problem as Arzìqi, different place.</p>
+      <p class="reveal">AI-generated code is the sharp end of this. It's fluent, it looks plausible, and it's often
+        quietly wrong. My job was to be the person who can tell the difference, and to do it consistently enough that the
+        feedback is actually worth something. That's what evaluation is: decide what "good" means, then hold everything
+        to it.</p>
     </div>
   </section>
 
   <section style="padding-top:0;">
     <div class="wrap">
-      <p class="section-label reveal">What I hunted for</p>
+      <p class="section-label reveal">What I looked for</p>
       <div class="decisions reveal">
         <div class="decision">
           <div class="type">Failure mode</div>
           <h3>Hallucinations</h3>
-          <p class="muted">Confident, fluent output that invents APIs, behavior, or facts that don't exist — the most dangerous because it's the most convincing.</p>
+          <p class="muted">Confident output that invents APIs or behaviour that doesn't exist. The scariest kind, because it reads so well.</p>
         </div>
         <div class="decision">
           <div class="type">Failure mode</div>
-          <h3>Instruction-following gaps</h3>
-          <p class="muted">Output that drifts from the actual task — solving a nearby problem, ignoring a constraint, or quietly changing the spec.</p>
+          <h3>Not following instructions</h3>
+          <p class="muted">Code that drifts off the task. Solves something nearby, ignores a constraint, quietly changes the ask.</p>
         </div>
         <div class="decision">
           <div class="type">Failure mode</div>
-          <h3>Reasoning errors</h3>
-          <p class="muted">Logic that breaks under scrutiny — right-looking steps that don't actually compose into a correct result.</p>
+          <h3>Broken reasoning</h3>
+          <p class="muted">Logic that falls apart the moment you actually check it. Right-looking steps that don't add up.</p>
         </div>
         <div class="decision">
           <div class="type">Failure mode</div>
-          <h3>Incompleteness &amp; production-readiness</h3>
-          <p class="muted">Code that "works" in the happy path but isn't correct, complete, or usable enough for a developer to actually ship.</p>
+          <h3>Not quite done</h3>
+          <p class="muted">Works in the happy path, but isn't correct or complete enough for someone to really ship it.</p>
         </div>
       </div>
     </div>
@@ -103,20 +103,19 @@
 
   <section class="prose" style="padding-top:0;">
     <div class="wrap narrow">
-      <p class="section-label reveal">How it connects to my product work</p>
-      <p class="reveal">Both sides of my work answer the same question — <strong>can you trust what this system is telling
-        you?</strong> In Arzìqi, I make fragmented financial data trustworthy enough to act on. In model evaluation, I
-        make AI output reliable enough to ship. Both require defining "trustworthy" precisely, judging against it
-        consistently, and caring most about the failures that hide behind a confident surface. That instinct — for the
-        gap between <em>looks right</em> and <em>is right</em> — is the throughline of how I build and assess products.</p>
+      <p class="section-label reveal">How it ties to the product work</p>
+      <p class="reveal">Both sides of my work ask the same thing: can you trust what this is telling you? With Arzìqi
+        it's financial data. With the model it's generated code. Either way it comes down to deciding what trustworthy
+        means and caring most about the failures that hide behind a confident surface. Spotting the gap between "looks
+        right" and "is right" is the habit running through all of it.</p>
     </div>
   </section>
 
   <section id="contact">
     <div class="wrap">
       <div class="contact reveal">
-        <h2>Two domains, one instinct.</h2>
-        <p>Happy to talk through evaluation frameworks, fintech product, or where AI and trust meet.</p>
+        <h2>Two jobs, one habit.</h2>
+        <p>Happy to talk about evaluation, fintech product, or where AI and trust run into each other.</p>
         <div class="links">
           <a class="btn btn-primary" href="mailto:jerrygrantmax@gmail.com">Email me</a>
           <a class="btn btn-ghost" href="/arziqi">Arzìqi case study</a>
