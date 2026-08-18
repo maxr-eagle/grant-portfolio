@@ -201,9 +201,9 @@ footer { padding: 40px 0; color: var(--faint); font-size: .88rem; text-align: ce
 
 /* ---------- hero: photo-forward + mixed-weight headline ---------- */
 .hero-grid { display: grid; grid-template-columns: 1.12fr .88fr; gap: 48px; align-items: center; }
-.hero h1 { font-weight: 480; }
-.hero h1 .i { font-style: italic; font-weight: 400; }
-.hero h1 .b { font-weight: 680; }
+.hero h1, .cs-hero h1 { font-weight: 480; }
+.hero h1 .i, .cs-hero h1 .i { font-style: italic; font-weight: 400; }
+.hero h1 .b, .cs-hero h1 .b { font-weight: 680; }
 .hero-photo img {
   width: 100%; max-width: 360px; aspect-ratio: 4/5; object-fit: cover; margin-left: auto;
   border-radius: 20px; border: 1px solid var(--line); box-shadow: var(--shadow); background: var(--panel); display: block;
