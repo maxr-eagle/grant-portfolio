@@ -1,4 +1,4 @@
-// Portfolio interactions — tiny, dependency-free.
+// Portfolio interactions, tiny, dependency-free.
 (function () {
   "use strict";
 
